@@ -1,0 +1,261 @@
+* {
+    outline: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+.click
+{
+    opacity: 1;
+}
+.click:hover
+{
+    opacity: 0.5;
+}
+.images
+{
+    opacity: 1;
+}
+.images:hover
+{
+   opacity: 0.0; 
+}
+image:hover::after
+{
+    content:"";
+}
+.lastest
+{
+    width: 200px;
+    height: 200px;
+    opacity: 1;
+}
+.lastest:hover
+{
+opacity: 0.1;
+}
+.fact {
+    display: table-cell;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 900;
+    color: #828282;
+    min-width: 272px;
+    padding-right: 24px;
+    padding-left: 150px;
+    background-color: #F4F9F7;
+}
+.fact-number
+ {
+    font: normal 42px/38px HelveticaNeueLTPro-Bold,Helvetica,sans-serif;
+    display: block;
+    color: #2d4a41;
+    margin: 12px 0 14px;
+    background-color: #F4F9F7;
+}
+
+.card
+{
+    border: none;
+    background-color: #F4F9F7;
+}
+
+.section-left
+ {
+    display: table-cell;
+    width: 33%;
+    background: #000;
+    vertical-align: middle;
+    padding-right: 5%;
+ }
+ .section-left .color
+  {
+    color: #fff;
+    text-align: left;
+}
+h2.color {
+    font-size: 28px;
+    line-height: 38px;
+}
+.section-content
+ {
+    margin: 0 auto;
+    max-width: 1168px;
+    position: relative;
+    padding: 0 15px 88px;
+    text-align: left;
+ }
+ .bac-imag{
+     background-image: url("images/home-clients-6.jpg");
+     background-repeat: no-repeat;
+     background-size: 100%;
+ }
+ .sec-cont-img .bac-imag img{
+     padding: 15px;
+     margin: 15px;
+ }
+ .flex-container
+ {
+    display: flex;
+    align-items: stretch;
+  text-align: center;
+  }
+  
+  .flex-container > div
+   {
+    background-color: #F4F9F7;
+    color: black;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+   
+ }
+ .flex-container div:hover
+ {
+     opacity: 0.5;
+ }
+ /*login*/
+ #dalog {
+    width: 25%;
+    height: 600px;
+    padding: 5px;
+    border-radius: 5px;
+    border-color: white;
+   
+
+}
+#closediv{
+    width: 5%;
+   position: relative;
+   left: 360px;
+ color: rgba(0,0,0,0.5);
+   font-size: 20px;
+   
+}
+
+
+#head {
+    height: 20%;
+    width: 90%;
+    position: relative;
+ 
+
+
+}
+
+#head img {
+    width: 80%;
+    height: 125px;
+    position: absolute;
+    left: 50px;
+    bottom: 8px;
+    
+}
+
+#head h1 {
+  position:relative;
+  top:60px;
+  left: 20px;
+  
+}
+
+#Upass,#Uemail{
+    width: 70%;
+    height: 35px;
+    position: relative;
+    top: 60px;
+    left: 50px;
+
+}
+
+
+#lnkforget {
+    position: relative;
+    top:60px;
+    right:20px ;
+}
+
+#d1 {
+    width: 70%;
+    height: 70px;
+    border: 1px solid gray;
+    position: relative;
+    top: 100px;
+    left: 50px;
+    padding-top: 15px;
+    background-color: rgb(245, 244, 244);
+}
+
+#dalog input[type="checkbox"] {
+  
+    position: absolute;
+    left: 10px;
+    top: 20px;
+    height: 25px;
+    width: 40px;
+    float: left;
+
+}
+
+#dalog #lab {
+    position: relative;
+    
+     left: 50px;
+    top: 13px
+}
+
+#d1 img {
+    width: 80px;
+    height: 50px;
+    position: absolute;
+    right: 20px
+}
+
+#lbtn {
+    width: 95%;
+    height: 35px;
+    position: relative;
+    top: 120px;
+    left: 15px;
+    background-color: rgb(36, 218, 127);
+}
+
+#dalog #accountlink {
+
+    position: relative;
+    top: 130px;
+    left: 125px;
+}
+a:hover{
+    cursor: pointer;
+}
+#hide
+{
+    position: relative;
+    top:110px;
+    visibility: hidden;
+}
+/*register*/
+#ficon{color: red;font-size: .5em;opacity: .8;}
+#link{color: yellowgreen;text-decoration: none;}
+  #link:hover{color: green;}
+  #btn{
+       color: white;
+       background-color: green;
+       width: 42%;
+       height: 4em;
+       font-size: 1.1em;
+      }
+  #btn:hover{background-color: yellowgreen;}
+  
+  #linkfinal{
+             
+              font-size: 1.1em;
+              color: grey;
+              text-decoration: none;
+           }
+           #dia{overflow-y: hidden;}
+        
+    

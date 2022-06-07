@@ -1,0 +1,768 @@
+<!DocTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <style>
+        
+        #linnk:hover {opacity: .7;text-decoration: none;}
+        #linnk2:hover{opacity: .7;text-decoration: none;border-bottom: green 2px solid;}
+      
+        #flink,#slink,#tlink,#folink,#filink{text-decoration: none;}    
+        #flink:hover #tex1,#slink:hover #tex21,#tlink:hover #tex22,#folink:hover #tex23,#filink:hover #tex24{color:gainsboro;}           
+        #tex1{position: relative;bottom: 3.5em;}
+        #tex21,#tex23{position: relative;bottom: 5.8em;}
+        #tex22,#tex24{position: relative;bottom: 4.5em;}
+        .row.no-gutter {
+                      margin-left: 0;
+                      margin-right: 0;
+                       }
+
+        .row.no-gutter [class*='col-'],
+        .row.no-gutter [class*='col-']{
+                        padding-right: 0;
+                        padding-left: 0;
+                           }
+        .linkk{color:black;text-decoration: none;}                  
+        .linkk:hover{color:gray;}
+        #leftimg{color: white;}
+        #leftimg:hover{color: gainsboro;}
+        #rightimg{color: white;}
+        #rightimg:hover{color: gainsboro;}
+        #rightdiv{background-image: url("images/7.jpg");background-repeat: no-repeat;background-size: 47.2em;}
+        #leftdiv{background-image: url("images/2.jpg");background-repeat: no-repeat;background-size: 47.2em;}
+        .footericon{color:gainsboro;}
+        .footericon:hover{color: gray;}
+        .footericon:checked{opacity: 0;}
+        .linkfooter{text-decoration: none;color: gainsboro;}
+        .linkfooter:hover{color: gray;}
+       
+
+
+       
+    </style>
+    <script>
+        var c=0;
+        
+        window.onscroll = function(ev) {
+                                     if((window.pageYOffset >25)&& (window.pageYOffset <80))
+                                     { 
+                                        document.querySelector("#fcontainer").style.display="none";
+                                        document.querySelector("#fcontainer2").style.display="inline-block";
+                                        c=1;
+                                  
+                                     }
+                                    else if((c==1 && window.pageYOffset==0 ))
+                                     {
+                                       document.querySelector("#fcontainer").style.display="inline-block";
+                                       document.querySelector("#fcontainer2").style.display="none";
+                                       
+
+                                      }
+                                      else
+                                      {}
+                                     };
+              
+    
+                function showw(){
+                   setTimeout(function(){document.querySelector("#flink").style.visibility="visible";},400);
+                   setTimeout(function(){document.querySelector("#sdiv").style.visibility="visible";},700);
+                   setTimeout(function(){document.querySelector("#fodiv").style.visibility="visible";},1000);
+                   setTimeout(function(){document.querySelector("#tdiv").style.visibility="visible";},1300);
+                   setTimeout(function(){document.querySelector("#fidiv").style.visibility="visible";},1600);
+                   setTimeout(function(){document.querySelector("#delayimag").style.visibility="visible";},200);
+          
+
+                   document.querySelector("#fp").style.display="none";
+                  document.querySelector("#sp").style.display="none";
+                  document.querySelector("#tp").style.display="none";
+                  document.querySelector("#fop").style.display="none";
+                  document.querySelector("#fip").style.display="none";
+                  document.querySelector("#sip").style.display="none";
+                  document.querySelector("#sep").style.display="none";
+                  document.querySelector("#eip").style.display="none";
+               }
+             
+              function showposts()
+              {   
+                   document.querySelector("#viewbtn").innerHTML="Loading More Posts";
+                   setTimeout(function() {document.querySelector("#fp").style.display="inline-block";
+                   document.querySelector("#sp").style.display="inline-block";},130);
+                   
+                   
+                   
+                   window.onscroll = function(ev) {
+                      if (window.pageYOffset >2195)
+                       {setTimeout(function(){document.querySelector("#tp").style.display="inline-block";
+                        document.querySelector("#fop").style.display="inline-block";},150);
+                       
+                        part();
+                      
+                      }
+                     
+                     
+                   };
+                 
+               
+                 
+                   
+                  
+               }
+
+               function part()
+               {
+                window.onscroll = function(ev) {
+                      if (window.pageYOffset >3005)
+                       { 
+                        setTimeout(function(){ document.querySelector("#fip").style.display="inline-block";
+                        document.querySelector("#sip").style.display="inline-block"; 
+                         },150); 
+                         
+                         part2();
+                        
+                        
+                      }
+                     
+               
+
+                     
+                   };
+
+               }
+               function part2()
+               {window.onscroll = function(ev) {
+                      if (window.pageYOffset >3885)
+                        {setTimeout(function(){  
+                         document.querySelector("#sep").style.display="inline-block";
+                        document.querySelector("#eip").style.display="inline-block";},150);  
+                          checkforscrollbar();
+                    }
+                  
+               };
+              
+            }
+            function checkforscrollbar()
+            {
+                window.onscroll = function(ev) {
+                                     if((window.pageYOffset >25)&& (window.pageYOffset <40))
+                                     { 
+                                        document.querySelector("#fcontainer").style.display="none";
+                                        document.querySelector("#fcontainer2").style.display="inline-block";
+                                        c=1;
+                                  
+                                     }
+                                    else if((c==1 && window.pageYOffset==0 ))
+                                     {
+                                       document.querySelector("#fcontainer").style.display="inline-block";
+                                       document.querySelector("#fcontainer2").style.display="none";
+                                       
+
+                                      }
+                                   
+                                     };
+            }
+
+               
+            
+
+   
+    </script>
+    
+    
+    <script src="https://kit.fontawesome.com/fff485e343.js" crossorigin="anonymous"></script>
+</head>
+<body  id="mainbody" style="overflow-y: scroll;border: hotpink 2px solid; overflow-x: hidden;" onload="showw()">
+ 
+  <header class="container-fluid p-0 bg-body  fixed-top"  id="fcontainer" >
+                 <div class="row  " style="background-color: black;" id="oldnave" >
+                      <div class="col-sm-4">
+                            <a href="#mainbody" style="text-decoration: none;"><img src="images/Soundsnap_-_Logo_-_White_in_Background.png"
+                                 height="37%" width="40%"/></a>
+                      </div>
+                      <div class="col-sm-1" >
+
+                      </div>
+                      <div   class="col-sm-2  " id="linnk">
+                            <a href="" class="text-white  "  id="linnk2">SOUND&nbspEFFECTS</a>
+                      </div>
+                      <div class="col-sm-4 text-white">
+                           <a href=""  class="text-white " id="linnk" style="border-bottom: green 2px solid;">BLOG</a>
+                      </div>
+                      <div class="col-sm-0 text-white">
+                        <a href="" style="text-decoration: none;" class="text-white"  id="linnk"><i class="fab fa-facebook-f" ></i></a>
+                      </div>
+                      <div class="col-sm-0 text-white" style="padding-left: 1.4em;">
+                           <a href="" style="text-decoration: none;" class="text-white "  id="linnk"><i class="fab fa-twitter" ></i></a>
+                      </div>
+                      <div class="col-sm-0 text-white" style="padding-left: 1.4em;">
+                        <a href="" style="text-decoration: none;" class="text-white "  id="linnk"> <i class="fas fa-search" ></i></a>
+                      </div>
+                 </div>
+                 <div class="row" style="background-color: black;" id="oldbar">
+                     <div class="col-sm-2">
+
+                     </div>
+                    <div class="col-sm-2 text-white">
+                        <a href="" style="text-decoration: none;"class ="text-white" id="linnk">NEWS&UPDATES</a>
+                    </div>
+                    <div class="col-sm-3 text-white">
+                        <a href="" style="text-decoration: none;" class="text-white"  id="linnk" > FILMMAKING&POST-PRODUCTION</a>
+                    </div>
+                    <div class="col-sm-3 text-white">
+                        <a href="" style="text-decoration: none;" class="text-white"  id="linnk" >POST-AUDIO&SOUND DESIGN</a>
+                    </div>
+
+                    <div class="col-sm-2 text-white">
+                        <a href="" style="text-decoration: none;" class="text-white" id="linnk" >FREE STAFF</a>
+                    </div>
+                    <div class="col-sm-1">
+
+                    </div>
+
+                </div>
+                
+  
+
+
+    </header>
+    <header class="container-fluid p-0 bg-body  fixed-top "  id="fcontainer2" style="display: none;">
+        <div class="row" style="background-color: black;" id="fixednavbar">
+            <div class="col-sm-4">
+                <a href="#mainbody" style="text-decoration: none;"><img src="images/Soundsnap_-_Logo_-_White_in_Background.png" height="37%" width="40%"/></a>
+           </div>
+           <div class="col-sm-1 text-white" >
+               <a href="" style="text-decoration: none;position: absolute;right: 12em;"class ="text-white" id="linnk">NEWS&UPDATES</a>
+           </div>
+           <div class="col-sm-3 text-white">
+               <a href="" style="text-decoration: none;position: absolute;right: 8.3em;" class="text-white"  id="linnk" > FILMMAKING&POST-PRODUCTION</a>
+           </div>
+           <div class="col-sm-2 text-white">
+               <a href="" style="text-decoration: none;position: absolute;right: 2em;" class="text-white"  id="linnk" >POST-AUDIO&SOUND DESIGN</a>
+           </div>
+
+           <div class="col-sm-1 text-white">
+               <a href="" style="text-decoration: none;padding-right: 1em;" class="text-white" id="linnk" >FREE STAFF</a>
+           </div>
+           <div class="col-sm-0 text-white">
+            <a href="" style="text-decoration: none;" class="text-white"  id="linnk"><i class="fab fa-facebook-f" ></i></a>
+          </div>
+          <div class="col-sm-0 text-white" style="padding-left: 1.4em;">
+               <a href="" style="text-decoration: none;" class="text-white "  id="linnk"><i class="fab fa-twitter" ></i></a>
+          </div>
+          <div class="col-sm-0 text-white" style="padding-left: 1.4em;">
+            <a href="" style="text-decoration: none;" class="text-white "  id="linnk"> <i class="fas fa-search" ></i></a>
+          </div>
+
+       </div>
+
+    </header>
+  
+ <aside  class="container-fluid p-0  " style="background-color: violet;" >
+     <div class="row no-gutter" id="secondcontent" style="padding-top: 4.3em;background-color: rgba(0, 0, 0, 0.836)" >
+                                    <a class="col-sm-6 text-white" href="" id="flink" style="height: 7em;visibility: hidden;">
+                                                            <img src="images/1.jpg" style="width: 97.95%;"/>
+                                                             <p id="tex1" style="font-size: 4em;padding: 0.5em;"><b>4 Quick Tips for Fixing Damaged Audio</b></p>
+
+                                     
+                                    </a>
+                                    <div  class="col-sm-3 text-white" >
+                                        
+                                                                         <div class="row " style="height: 13em;">
+                                                                             <a href=""  id="slink" >
+                                                                              <div class="col-sm-12 text-white" style="visibility: hidden;" id="sdiv" >
+                                                                                   <img src="images/FabFilter-Pro-Q3-min.jpg" style="width: 26em"/>
+                                                                                   <p id="tex21" style="font-size: 1.7em;padding: 0.5em;" ><b>8 Top Plug-Ins: Fan Favourite Choices For Producers, Designers, and Recordists</b></p>
+                                                                              </div>
+                                                                            </a>
+                                                                         </div>
+                                                                         <div class="row " >
+                                                                            <a href="" id="tlink">
+                                                                                <div class="col-sm-12 text-white" style="position: absolute;top: 55%;visibility: hidden;"  id="tdiv"  >
+                                                                                     <img src="images/3.jpg" style="width: 26em;"/>
+                                                                                     <p id="tex22" style="font-size: 1.7em;padding: 0.3em;" ><b>5 Beginner Tips for Video Aspect Ratio in Premiere Pro</b></p>
+                                                                                </div>
+                                                                              </a>
+
+                                                                            
+                                                                        </div>
+
+                                        </div>
+                                        <div  class="col-sm-3 text-white" style="padding-left: 2.5em;">
+                                        
+                                            <div class="row " >
+                                                <a href=""  id="folink" >
+                                                 <div class="col-sm-12 text-white" style="visibility: hidden;" id="fodiv" >
+                                                      <img src="images/4.jpg" style="width: 96%;padding-left:.2%;"/>
+                                                      <p id="tex23" style="font-size: 1.7em;padding: 0.5em;" ><b>The Art of the Clapperboard - How to Use a Film Slate</b></p>
+                                                 </div>
+                                               </a>
+                                            </div>
+                                            <div class="row " >
+                                               <a href="" id="filink" >
+                                                   <div class="col-sm-12 text-white" style="position: absolute;top: 55%;visibility: hidden;"  id="fidiv" >
+                                                        <img src="images/2.jpg" style="width: 22.2em;"/>
+                                                        <p id="tex24" style="font-size: 1.7em;padding: 0.5em;" ><b>Premiere Rush vs Pro</b></p>
+                                                   </div>
+                                                 </a>
+
+                                               
+                                           </div>
+
+           </div>
+                                    
+                                          
+
+    
+    
+
+ </aside>
+ <article class="container-fluid p-0  ">
+    <div class="row no-gutter bg-white" style="background-color: white;padding-top: 10%;">
+        <div class="col-sm-2">
+
+        </div>
+        <div class="col-sm-5" >
+                      <a href="" style="text-decoration: none;" > <img  src="images/10.jpg" width="80%" style="visibility: hidden;" id="delayimag"/></a>
+        </div>
+        <div class="col-sm-3 ">
+            <p style="font-size: 2em;" ><b><a href="" class="linkk" style="text-decoration: none;">These 5 Premiere Pro Tips Will Save You Hours of Time</b></a></p>
+            <p style="color: gray;">I’m sure it has happened to you once or twice before. 
+                One day you’re editing and you accidentally stumble across a tip,
+                 trick, hack, or keyboard shortcut that suddenly revolutionizes your workflow.
+                 Immediately, you’re saving hours of time with this…</p>
+
+        </div>
+        <div class="col-sm-2">
+
+        </div>
+
+    </div>
+ </article>
+ <article class="container-fluid p-0  ">
+    <div class="row no-gutter bg-white" style="background-color: white;padding-top: 10%;">
+        <div class="col-sm-2">
+
+        </div>
+        <div class="col-sm-5" >
+                      <a href="" style="text-decoration: none;"> <img  src="images/11.jpg" width="80%"/></a>
+        </div>
+        <div class="col-sm-3 ">
+            <p style="font-size: 2em;" ><b><a href="" class="linkk" style="text-decoration: none;">Quickstart Guide to Audio Compression in Premiere</b></a></p>
+            <p style="color: gray;">Besides EQ, compression might be the most ubiquitous term
+                in the audio world. However, it definitely isn’t the easiest to learn. 
+               For video editors who handle voice-overs, production audio, 
+               or even rough mixing, knowing how to use a compressor will…
+               </p>
+
+        </div>
+        <div class="col-sm-2">
+
+        </div>
+
+    </div>
+ </article>
+
+ <article class="container-fluid p-0  ">
+    <div class="row no-gutter bg-white" style="background-color: white;padding-top: 10%;">
+        <div class="col-sm-2">
+
+        </div>
+        <div class="col-sm-5" >
+                      <a href="" style="text-decoration: none;"> <img  src="images/12.jpg" width="80%"/></a>
+        </div>
+        <div class="col-sm-3 ">
+            <p style="font-size: 2em;" ><b><a href="" class="linkk" style="text-decoration: none;" >5 Beginner Tips for Video Aspect Ratio in Premiere Pro</b></a></p>
+            <p style="color: gray;">Video aspect ratio in Premiere Pro 
+                can be altered in a variety of ways. 
+                These methods and settings are not […] </p>
+
+        </div>
+        <div class="col-sm-2">
+
+        </div>
+
+    </div>
+ </article>
+     
+ <article class="container-fluid p-0  " style="display: none;" id="fp">
+    <div class="row no-gutter bg-white" style="background-color: white;padding-top: 10%;">
+        <div class="col-sm-2">
+
+        </div>
+        <div class="col-sm-5"   >
+                      <a href="" style="text-decoration: none;"  ><img  src="images/13.jpg" width="80%" height="300em " /> </a>
+        </div>
+        <div class="col-sm-3 ">
+            <p style="font-size: 2em;" ><b><a href="" class="linkk" style="text-decoration: none;" >5 Hidden Features of Premiere Pro to Speed up Your Workflow</b></a></p>
+            <p style="color: gray;">I’ll bet you know all there is
+                to know about Premiere Pro, huh? Premiere
+                Pro has been around for almost […] </p>
+
+        </div>
+        <div class="col-sm-2">
+
+        </div>
+
+    </div>
+ </article>
+
+ <article class="container-fluid p-0  " style="display: none;" id="sp" >
+    <div class="row no-gutter bg-white" style="background-color: white;padding-top: 10%;">
+        <div class="col-sm-2">
+
+        </div>
+        <div class="col-sm-5" >
+                      <a href="" style="text-decoration: none;"> <img  src="images/14.jpg" width="80%"/></a>
+        </div>
+        <div class="col-sm-3 ">
+            <p style="font-size: 2em;" ><b><a href="" class="linkk" style="text-decoration: none;" >The Art of the Clapperboard – How to Use a Film Slate</b></a></p>
+            <p style="color: gray;">A long-held symbol of the entire art of filmmaking itself,
+                the clapperboard is so much more than an ancient tool […] </p>
+
+        </div>
+        <div class="col-sm-2">
+
+        </div>
+
+    </div>
+ </article>
+ 
+
+ <article class="container-fluid p-0  " style="display: none;" id="tp">
+    <div class="row no-gutter bg-white" style="background-color: white;padding-top: 10%;">
+        <div class="col-sm-2">
+
+        </div>
+        <div class="col-sm-5" >
+                      <a href="" style="text-decoration: none;"> <img  src="images/15.jpg" width="80%"/></a>
+        </div>
+        <div class="col-sm-3 ">
+            <p style="font-size: 2em;" ><b><a href="" class="linkk" style="text-decoration: none;" >Soundsnap: Better, Faster, Bigger. Now even Bigger.</b></a></p>
+            <p style="color: gray;">We know you‘re always on the lookout for the perfect
+                new sound for your project. Here at Soundsnap, we’re no […]</p>
+
+        </div>
+        <div class="col-sm-2">
+
+        </div>
+
+    </div>
+ </article>
+
+ <article class="container-fluid p-0  " style="display: none;" id="fop">
+    <div class="row no-gutter bg-white" style="background-color: white;padding-top: 10%;">
+        <div class="col-sm-2">
+
+        </div>
+        <div class="col-sm-5" >
+                      <a href="" style="text-decoration: none;"> <img  src="images/16.jpg" width="80%" height="290em"/></a>
+        </div>
+        <div class="col-sm-3 ">
+            <p style="font-size: 2em;" ><b><a href="" class="linkk" style="text-decoration: none;" >Tips for Editing Audio in Avid Media Composer
+                Audio can make or break your video.</b></a></p>
+            <p style="color: gray;">If you’re 
+                editing your video in Avid Media Composer then 
+                you have a ton of tools at your fingertips for you to have
+                 the perfect audio on your next project.</p>
+
+        </div>
+        <div class="col-sm-2">
+
+        </div>
+
+    </div>
+ </article>
+ <article class="container-fluid p-0  " style="display: none;" id="fip">
+    <div class="row no-gutter bg-white" style="background-color: white;padding-top: 10%;">
+        <div class="col-sm-2">
+
+        </div>
+        <div class="col-sm-5" >
+                      <a href="" style="text-decoration: none;"> <img  src="images/17.jpg" width="80%" height="290em"/></a>
+        </div>
+        <div class="col-sm-3 ">
+            <p style="font-size: 2em;" ><b><a href="" class="linkk" style="text-decoration: none;" >J.R Fountain’s 10 Favorite Tools for Cinematic Sound Design</b></a></p>
+            <p style="color: gray;">Much like a guitarist’s pedal rig or a superhero’s utility belt, 
+                a sound designer’s hardware and software are essential to […]</p>
+
+        </div>
+        <div class="col-sm-2">
+
+        </div>
+
+    </div>
+ </article>
+ <article class="container-fluid p-0  " style="display: none;" id="sip">
+    <div class="row no-gutter bg-white" style="background-color: white;padding-top: 10%;">
+        <div class="col-sm-2">
+
+        </div>
+        <div class="col-sm-5" >
+                      <a href="" style="text-decoration: none;"> <img  src="images/18.jpg" width="80%" height="290em"/></a>
+        </div>
+        <div class="col-sm-3 ">
+            <p style="font-size: 2em;" ><b><a href="" class="linkk" style="text-decoration: none;" >OMF Audio Workflow In Premiere</b></a></p>
+            <p style="color: gray;">If you are working with a sound engineer or an audio mixer,
+                you need to know how to share files with them in the best workflow.
+                Many audio mixers today prefer OMFs, which are essentially packaged 
+               audio projects</p>
+
+        </div>
+        <div class="col-sm-2">
+
+        </div>
+
+    </div>
+ </article>
+ <article class="container-fluid p-0  " style="display: none;" id="sep">
+    <div class="row no-gutter bg-white" style="background-color: white;padding-top: 10%;">
+        <div class="col-sm-2">
+
+        </div>
+        <div class="col-sm-5" >
+                      <a href="" style="text-decoration: none;"> <img  src="images/19.jpg" width="80%" height="290em"/></a>
+        </div>
+        <div class="col-sm-3 ">
+            <p style="font-size: 2em;" ><b><a href="" class="linkk" style="text-decoration: none;" >Ducking Audio For Smoother Sounding Mixes</b></a></p>
+            <p style="color: gray;">Audio ducking is the practice of adjusting
+                certain elements in a mix to make room for other sounds. The most […]</p>
+
+        </div>
+        <div class="col-sm-2">
+
+        </div>
+
+    </div>
+ </article>
+ <article class="container-fluid p-0  " style="display: none;" id="eip">
+    <div class="row no-gutter bg-white" style="background-color: white;padding-top: 10%;">
+        <div class="col-sm-2">
+
+        </div>
+        <div class="col-sm-5" >
+                      <a href="" style="text-decoration: none;"> <img  src="images/20.jpg" width="80%" height="290em"/></a>
+        </div>
+        <div class="col-sm-3 ">
+            <p style="font-size: 2em;" ><b><a href="" class="linkk" style="text-decoration: none;" >Using the Audio Track Mixer in Premiere</b></a></p>
+            <p style="color: gray;">Looking for a quick way to mix audio? Need to a
+                pply the same effect to many clips at once?
+                The Audio Track Mixer has you covered.</p>
+
+        </div>
+        <div class="col-sm-2">
+
+        </div>
+
+    </div>
+ </article>
+ <div class="container-fluid p-0  " >
+    <div class="row no-gutter bg-white" style="background-color: white;padding-top: 10%;">
+        <div class="col-sm-5">
+
+        </div>
+        <div class="col-sm-7" >
+                                <button type="button" onclick="showposts()" id="viewbtn">View More Posts</button>
+        </div>
+    </div>
+</div>
+
+<aside class="container-fluid p-0  ">
+    <div class="row no-gutter " style="padding-top: 3%;">
+    
+        <div class="col-sm-6" id="leftdiv" style="height: 25em;text-align: center;" >
+        <a href="" style="text-decoration: none;" id="leftimg">
+            <pre>      
+              
+                
+                 
+
+
+            </pre>
+            <p style="font-size: 2em;"><b>Premiere Rush vs Pro</b></p>
+            <pre>      
+              
+                
+                 
+
+
+
+            </pre>
+        </a>
+       </div>
+      <div class="col-sm-6" id="rightdiv"  style="height: 24.7em;">
+        <a href="" style="text-decoration: none;" id="rightimg">
+            <pre>      
+              
+                
+                 
+
+
+            </pre>
+            <p><center style="font-size: 2em;"><b>Thelma Schoonmaker - The Film Editor of Almost Every Scorsese Film</b></center></p>
+            <pre>      
+              
+                
+                 
+
+            </pre>
+        </a>
+      </div>
+    
+    </div>
+
+</aside>
+<footer class="container-fluid p-0  " style="background-color: black;">
+    <div class="row no-gutter " style="padding-top: 7%;">
+        <div class="col-sm-1">
+
+        </div>
+        <div class="col-sm-5" style="text-align: center;border: gainsboro .002em solid; border-top: gainsboro .2em solid ;" >
+            <p style="color: white;font-size: 1.5em;">Get premium, royalty free sound effects</p>
+            <button type="button" style="color: white;background-color: black;">Browse Sounds</button>
+
+        </div>
+        <div class="col-sm-1">
+
+        </div>
+        <div class="col-sm-4" style="text-align: center;border: gainsboro .002em solid; border-top: gainsboro .2em solid ;">
+            <p style="color: white;font-size: 1.5em;">Subscribe to our mailing list</p>
+            <input type="text" placeholder="Email address" style="color: gray;background-color: black;"><button type="button" style="color: white;background-color: black;">Subscribe</button>
+
+        </div>
+        <div class="col-sm-1">
+
+        </div>
+        
+        
+
+    </div>
+    <div class="row  " style="padding-top:7%;" >
+        <div class="col-sm-1">
+
+        </div>
+        <div class="col-sm-2">
+            <a href="" style="text-decoration: none;"><img src="images/Soundsnap_-_Logo_-_White_in_Background.png" height="80%" width="80%"/></a>
+        </div>
+        <div class="col-sm-2">
+            <p style=" color: white;">Products</p>
+        </div>
+        <div class="col-sm-2">
+            <p style=" color: white;">Company</p>
+        </div>
+        <div class="col-sm-2">
+            <p style=" color: white;">Legal</p>
+        </div>
+        <div class="col-sm-1">
+            <p style=" color: white;">Blog</p>
+        </div>
+        <div class="col-sm-2">
+           <a href="https://www.facebook.com/Soundsnap/" style="text-decoration: none;" class="footericon"> <i class="fab fa-facebook-f" style="font-size: 2em;"></i></a>
+           <a href="https://twitter.com/soundsnapreal" style="text-decoration: none;padding-left:4%;" class="footericon"><i class="fab fa-twitter" style="font-size: 2em;"></i></a>
+           <a href="https://www.instagram.com/soundsnapsfx/" style="text-decoration: none;padding-left:4%;" class="footericon"> <i class="fab fa-instagram" style="font-size: 2em;"></i></a>
+            <a href="https://www.youtube.com/channel/UCKVOUENwSdMz9Z97RMTPMig" style="text-decoration: none;padding-left:4%;" class="footericon"><i  class="fab fa-youtube" style="font-size: 2em;"></i></a>
+            <a href="https://www.linkedin.com/company/soundsnap" style="text-decoration: none;padding-left:4%;" class="footericon"><i class="fab fa-linkedin-in" style="font-size: 2em;"></i></a>
+        </div>
+       
+
+    </div>
+    <div class="row  " >
+        <div class="col-sm-3">
+
+        </div>
+        
+        <div class="col-sm-2">
+            <a href="" style="text-decoration: none; " class="linkfooter">Browse Sounds</a>
+        </div>
+        <div class="col-sm-2">
+            <a href="" style="text-decoration: none; " class="linkfooter">Jobs</a>
+        </div>
+        <div class="col-sm-2">
+            <a href="" style="text-decoration: none; " class="linkfooter">License</a>
+        </div>
+        <div class="col-sm-1">
+            <a href="" style="text-decoration: none; " class="linkfooter">Home</a>
+        </div>
+        <div class="col-sm-2">
+
+        </div>
+     </div>
+        <div class="row  " >
+            <div class="col-sm-3">
+    
+            </div>
+            
+            <div class="col-sm-2">
+                <a href="pricing.html" style="text-decoration: none; " class="linkfooter">Pricing</a>
+            </div>
+            <div class="col-sm-2">
+                <a href="" style="text-decoration: none; " class="linkfooter">Comunity</a>
+            </div>
+            <div class="col-sm-2">
+                <a href="" style="text-decoration: none; " class="linkfooter">Terms of use</a>
+            </div>
+            <div class="col-sm-1">
+                <a href="" style="text-decoration: none; " class="linkfooter">Glossary</a>
+            </div>
+            <div class="col-sm-2">
+    
+            </div>
+        </div>
+       <div class="row  " >
+                <div class="col-sm-3">
+        
+                </div>
+                
+                <div class="col-sm-2">
+                    <a href="FAQ.html" style="text-decoration: none; " class="linkfooter">FAQ</a>
+                </div>
+                <div class="col-sm-2">
+                    <a href="" style="text-decoration: none; " class="linkfooter">Education</a>
+                </div>
+                <div class="col-sm-2">
+                    <a href="" style="text-decoration: none; " class="linkfooter">Privacy of Policy</a>
+                </div>
+                <div class="col-sm-1">
+                    <a href="" style="text-decoration: none; " class="linkfooter">Free Stuff</a>
+                </div>
+                <div class="col-sm-2">
+        
+                </div>
+       </div>
+                <div class="row  " >
+                    <div class="col-sm-5">
+            
+                    </div>
+                    
+                
+                    <div class="col-sm-2">
+                        <a href="Contact Us.html" style="text-decoration: none; color: gainsboro" class="linkfooter">Contact</a>
+                    </div>
+                  
+                    <div class="col-sm-5">
+            
+                    </div>
+                </div>
+                <div class="row  " style="padding-top: 5%;">
+                    <div class="col-sm-4">
+            
+                    </div>
+                    
+                
+                    <div class="col-sm-4">
+                        <p style="color: white;">@2022 Sound Snap Blog.All Rights reserved</p>
+                    </div>
+                  
+                    <div class="col-sm-4">
+            
+                    </div>
+                </div>
+
+</footer>
+
+
+
+ <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+</body>
+</html>

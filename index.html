@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" 
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/fff485e343.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/download.svg" type="image/x-icon">
+    <link rel="apple-touch-icon" href="images/download.svg">
+    <title>download sound effects</title>
+</head>
+<body>
+    <!--Nav Bar-->
+    <header>
+        <div class="navbar navbar-expand-lg bg-white text-dark fixed-top w-60%">
+        <!--contain of nav bar-->
+        <div class="container-fluid">
+            <!--logo image-->
+            <div class="logo">
+                <a href="index.html" target="_self" class="navbar-brand"><img src="images/logo.svg"></a>
+            </div>
+            <!--search box-->
+            <form class="d-flex col-6 ">
+                <input class="form-control me-8" type="search" onclick="search()" 
+                placeholder="Search" width="60%" aria-label="Search "
+                style="border: 1px solid green;"> 
+                <input type="submit" value="Search" hidden />
+              </form>
+              <!--links-->
+              <div class="col-1"></div>
+              <div class="collapse navbar-collapse col-5 bg-white text-dark" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item ">
+                    <a class="nav-link bg-white text-dark click" aria-current="page" href="pricing.html">Pricing</a> <!--link-->
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link bg-white text-dark click" href="Blog.html">Blog</a> <!--link-->
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link bg-white text-dark click" href="FAQ.html" target="_blank">FAQ</a> <!--link-->
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link bg-white text-dark click" href="#">SEFHD</a> <!--link-->
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active bg-white text-dark click" href="#" onclick="logpage()"><strong>Login /</strong></a> <!--link-->
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active bg-white text-dark click" href="#"  onclick="showdia()"><strong>Register</strong></a> <!--link-->
+                  </li>
+                  <!--icons-->
+                  <li class="nav-item ">
+                    <a class="nav-link bg-white text-dark " style="opacity: 0.5;" href="https://www.facebook.com/Soundsnap/">
+                      <i class="fab fa-facebook-f click"></i></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link bg-white text-dark " style="opacity: 0.5;" href="https://www.instagram.com/Soundsnap/">
+                      <i class="fab fa-instagram click"></i></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link bg-white text-dark " style="opacity: 0.5;" href="https://www.twitter.com/Soundsnap/">
+                      <i class="fab fa-twitter click"></i></a>
+                  </li>
+                </ul>
+        </div>    
+        </div>
+        </div>
+    </header>
+    <!--login-->
+    <dialog id="dalog" style="display: none;
+    position: relative;left:35%;top:10%;width: 28%;">
+      <div id="closediv"><a src="#" id="closebtn" onclick="closedialog()"><i class="fal fa-times"></i></a></button></div>
+     <div id="head">
+         <img src="images/Login/logo.jpg">
+         <h1 style="text-align: center;"> Login to soundsnap</h1>
+     </div> 
+     <form action="index.html" style="height: 300px; padding: 10px;">
+
+         <input name="e-mail" type="email" id="Uemail" placeholder="Username or e-mail address*" pattern= "[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Email must be like characters@characters.domain" required><br><br>
+         
+         <input name="password" type="password" id="Upass" placeholder="password*" pattern=".{8,}" title="8 characters or more" required>
+
+         <a id="lnkforget" src="forgot.html">Forgot?</a><br>
+     
+         <div id="d1">
+             <input type="checkbox" name="robot" id="chbtn" required>
+             <label id="lab" for="chbtn">Iam not a robot</label>
+                
+             <img src="images/Login/repot.png">
+         </div><br>
+         <div id="hide" style="background-color: pink;color: rgb(248, 136, 155);">Sorry,we couldn't find an account with those details &nbsp; ,Check your sepling or<a src="#">Create a new account</a> </div>
+         <button id="lbtn" onclick="loged()">Log in</button><br>
+         <a onclick="converttoregister(event)" id="accountlink">Create a New Account</a>
+     </form>
+ </dialog>
+ <!--register-->
+ <dialog id="dia" style="width: 30%;height: auto;
+  position: relative;left:35%;top:10%;width: 28%;">
+  <div class="container">
+    <form action="" method="post" class="was-validated"  >
+        <div class="row form-floating mt-3">
+            <div class="col-sm-5">
+
+            </div>
+            <div class="col-sm-6">
+                <img src="images/soundsnap-best-online-sound-effects-library-feature-image-logo.jpg"
+                 height="35%" width="35%" id="imag" />
+            </div>
+            <div class="col-sm-1">
+                <i class="fas fa-times" id="xicon" onclick="closedia()" style="position: absolute;right: 1em;"></i>
+            </div>
+           
+        </div>
+            <h1 ><center>Create an account for free</center></h1>  
+      <div class="form-floating mt-3">
+        <input type="email"  class="form-control" id="emailinput" placeholder="Email" required oninvalid="showmsg()" pattern="^[a-zA-Z]{4,}@Gmail\.com$"  >
+        <label for="emailinput" >E-mail address<i class="fas fa-star" id="ficon"></i></label>
+        <div class="valid-feedback">
+           <b> email available!</b>
+          </div>
+        <div class="invalid-feedback" style="display: none;color: rgb(216, 19, 19);" id="msgemailinvalid">
+        <b> The e-mail address is not valid,the pattern should be "^[a-zA-Z]{4,}@Gmail\.com$"</b>
+         </div>
+      </div>
+
+      <div class="form-floating mt-3">
+         
+        <input type="password"  class="form-control" id="passwordinput" placeholder="password" required>
+        <label for="passwordinput" >password</label>
+        
+     </div>
+     
+     <div class="form-floating mt-3">
+         
+        <input type="password"  class="form-control" id="Confirmpasswordinput" placeholder="password" onkeydown="checkforvalid()" required>
+        <label for="Confirmpasswordinput" >Confirm password</label>
+        <div  style="visibility: hidden;color: rgb(216, 19, 19);" id="msgconfirm">
+        <b>The passwords not match</b>
+         
+         </div>
+     </div>
+     <div class=" mt-3">
+        <p>By signing up you agree to receive our newsletter.<br>
+            No Spam!</p>
+     </div>
+     <div class=" mt-3">
+        <input type="checkbox" class="form-check-label" id="checkboxinput" required >
+        <label for="checkboxinput" class=" form-check-label">I agree to the<a href=""  id="link"> Terms of Service</a>&nbspand&nbsp<a  href=""  id="link" >Privacy Policy</a></label>
+     
+     </div>
+     
+     <div class="row mt-3 ">
+        <div class="col=sm-1">
+
+        </div>
+        <div class="col=sm-10">
+       <button type="submit" id="btn" style="width: 22.5em;" onclick="checkforvaliddata(event)">Creat Account</button>
+        </div>
+        <div class="col=sm-1">
+
+        </div>
+     </div>
+
+     <div class="row mt-3 ">
+         <div class="col=sm-9">
+
+         </div>
+         <div class="col=sm-3">
+        <a   id="linkfinal" onclick="converttologin(event)">Already have an account? Login here</a>
+          </div>
+    </div>
+    
+    
+   </form>
+
+</div>
+ </dialog>
+
+    <!--Find the perfect sound-->
+    <section>
+      <div class="container-fluid" style="width: 100%; margin: 0; padding: 0;">
+        <div class="d-flex mt-5">
+          <div style="width: 50%; background-color: black; color: white;" class="text-center ">
+            <h1  class="display-8 my-5"><strong class="text-white" style="font: size 50px;font: weight 100px;">
+              Find The Perfect <br>Sound Effects</strong> </h1>
+           <p class="py-2 lead">459,776 Available Sounds. Library Updated Weekly. Unlimited Downloads.
+             </p>
+             <div class="col-8">
+              <button class="btn btn-info bg-dark text-white btn-large p-3" style="width: 250px; font-weight: bold;">
+               <a href="Downloudregistration.html" style="text-decoration: none;">Buy Sound Effects</a> </button>
+             </div>
+           </div>
+           <div style="width: 50%; margin: 0;">
+            <img class="img-fluid  d-lg-block" src="images/nnn.PNG" alt="sea">
+           </div>
+        </div>
+         </div>
+      </div>
+    </section>
+    <section>
+      <!--images // Featured Sound Effect Categories-->
+      <div class="contianer-fluid">
+          <h1 style="padding: 80px 100px; margin-left: 50px;">
+            Featured Sound Effect Categories
+          </h1>
+          <div class="text-center">
+            <a><img src="images/walla.jpg" class="rounded float-left images" title="walla"></a>
+            <a><img src="images/whoosh.jpg" class="rounded float-left images" title="Whoosh"></a>
+            <a><img src="images/wind.jpg" class="rounded float-left images" title="Wind"></a>
+            <a><img src="images/footsteps.jpg" class="rounded float-left images" title="Footsteps"></a>
+            <a><img src="images/cartoon.jpg" class="rounded float-left images" titlt="cartoon"></a>
+           <a> <img src="images/drones.jpg" class="rounded float-left images" title="Drones"></a>
+          </div>
+          <div class="text-center">
+            <a><img src="images/menus_and_interfaces.jpg" class="rounded float-left images" title="Menus and Interfaces"></a>
+            <a><img src="images/ambience.jpg" class="rounded float-left images" title="Ambience"></a>
+          </div>
+      </div>
+    </section>
+    <br>
+    <br>
+    <br>
+    <br>
+    <!--images //Browse sounds by-->
+      <section > 
+        <div class="text-center justify-content-center text-dark" style="margin-left: 170px;">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item text-dark" role="presentation">
+            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home"
+             type="button" role="tab" aria-controls="home" aria-selected="true">Latest</button>
+          </li>
+          <li class="nav-item text-dark" role="presentation">
+            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" 
+            type="button" role="tab" aria-controls="profile" aria-selected="false">Location</button>
+          </li>
+          <li class="nav-item text-dark" role="presentation">
+            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact"
+             type="button" role="tab" aria-controls="contact" aria-selected="false">Tags</button>
+          </li>
+        </ul>
+      </div>
+      <br>
+      <br>
+      <br>
+       <!--tab lastest-->
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+            <div class="text-center">
+            <a><img src="images/beverly_hills@2x.jpg" class="rounded float-left  lastest"  title="beverly_hills" ></a>
+            <a><img src="images/unleash_the_hounds.jpg" class="rounded float-left lastest" title="unleash_the_hounds"></a>
+            <a><img src="images/warped.jpg" class="rounded float-left lastest" title="warped"></a>
+            <a><img src="images/spandex_and_capes@2x.jpg" class="rounded float-left lastest" title="spandex_and_capes"></a>
+          </div>
+        </div>
+         <!-- tab location-->
+          <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+            <div class="container ">
+              <div class=" flex-container" >
+                <div style="flex-grow: 1;"><a href="#" style="text-decoration: none; color: black;">
+                  <img src="images/berlin.svg" alt="Berlin"> Berlin</a></div>
+                <div style="flex-grow: 1;"><a href="#" style="text-decoration: none; color: black;"> 
+                  <img src="images/london (1).svg" alt="london">London</a></div>
+                <div style="flex-grow: 1;"><a href="#" style="text-decoration: none; color: black;">
+                  <img src="images/paris (1).svg" alt="paris">Paris</a></div>
+                <div style="flex-grow: 1;"><a href="#" style="text-decoration: none; color: black;">
+                  <img src="images/washington.svg" alt="washington">Washington</a></div>
+              </div>
+              <div class=" flex-container" >
+                <div style="flex-grow: 1;"><a href="#" style="text-decoration: none; color: black;">
+                  <img src="images/athens.svg" alt="Athens">Athens</a></div>
+                <div style="flex-grow: 1;"><a href="#" style="text-decoration: none; color: black;">
+                  <img src="images/rio (1).svg" alt="rio">Rio </a></div>
+                <div style="flex-grow: 1;"><a href="#" style="text-decoration: none; color: black;">
+                  <img src="images/india (1).svg" alt="India">India</a></div>
+                <div style="flex-grow: 1;"><a href="#" style="text-decoration: none; color: black;">
+                  <img src="images/istanbul (1).svg" alt="Istanbul">Istanbul</a></div>
+              </div>
+            </div>
+         </div>
+           <!--tab tags-->
+          <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+            <div class="container">
+              <div class=" flex-container" >
+                <div style="flex-grow: 1;"><a href="#" style="text-decoration: none; color: black;">
+                  Plsing</a></div>
+                <div style="flex-grow: 1;"><a href="#" style="text-decoration: none; color: black;">
+                  Molten </a></div>
+                <div style="flex-grow: 1;"><a href="#" style="text-decoration: none; color: black;">
+                  Polaroid</a></div>
+                <div style="flex-grow: 1;"><a href="#" style="text-decoration: none; color: black;">
+                  Timpani</a></div>
+              </div>
+              <div class=" flex-container" >
+                <div style="flex-grow: 1;"><a href="#" style="text-decoration: none; color: black;">
+                  Nissan</a></div>
+                <div style="flex-grow: 1;"><a href="#" style="text-decoration: none; color: black;">
+                  Dark</a> </div>
+                <div style="flex-grow: 1;"><a href="#" style="text-decoration: none; color: black;">
+                  Diminuendo</a></div>
+                <div style="flex-grow: 1;"><a href="#" style="text-decoration: none; color: black;">
+                  Dreamy</a></div>
+              </div>
+          </div>
+       
+       
+       
+         
+       
+          
+         
+       
+      </section>
+      <!--Featuring sound designers & recordists from-->
+      <section>
+        <div class="cointainer-fluid">
+          <h1 style="padding: 80px 100px; margin-left: 50px;">
+            Featuring sound designers & recordists from
+          </h1>
+          <div class="text-center">
+            <img src="images/tenet.jpg" class="rounded float-left " title="tenet"
+             style="width: 200px; height: 200px;">
+            <img src="images/westworld.jpg " class="rounded float-left " title="westworld" 
+            style="width: 200px; height: 200px;">
+            <img src="images/the_revenant.jpg" class="rounded float-left " title="the_revenant"
+            style="width: 200px; height: 200px;">
+            <img src="images/mad_max.jpg" class="rounded float-left " title="mad_max"
+            style="width: 200px; height: 200px;">
+            <img src="images/black_swan@2x.jpg" class="rounded float-left " titlt="black_swan"
+            style="width: 200px; height: 200px;">
+            <img src="images/baby_driver@2x.jpg" class="rounded float-left " title="baby_driver"
+            style="width: 200px; height: 200px;">
+          </div>
+        </div>
+      </section>
+      <!--Discover the world’s most widely used sound effects platform-->
+      <section style="background-color: #F4F9F7;">
+        <div class="container-fluid" style="background-color: #F4F9F7;">
+          <h1 style="padding: 80px 100px; margin-left: 50px;">
+            Discover the world’s most widely used sound effects platform
+           </h1>
+           <!--numbers-->
+           <div class="fact">
+             <span class="fact-number users" >2,910,077</span>
+             <strong style="font-size: 28px;">Registered Users</strong>
+           </div>
+           <div class="fact">
+            <span class="fact-number users">460,130</span>
+            <strong style="font-size: 28px;">No. of Sounds</strong>
+          </div>
+          <!--cards-->
+          
+          <div class="d-flex justify-content-between "  style="padding: 80px 100px; margin-left: 50px;" >
+          <div class="card " style="width: 15rem" >
+            <img src="images/download (3).png" class="card-img-top" alt="..." width="120px" height="120px">
+            <div class="card-body">
+              <h5 class="card-title">A Focus on Sound</h5>
+              <p class="card-text" style="opacity: 0.5;">Soundsnap focuses solely on professional sound effects,
+                 with curated sounds added weekly.</p>  
+            </div>
+          </div>
+            <div class="card " style="width: 15rem" >
+              <img src="images/download.png" class="card-img-top" alt="..." width="120px" height="120px">
+              <div class="card-body float: left;">
+                <h5 class="card-title">Twice as Big</h5>
+                <p class="card-text" style="opacity: 0.5;">We are the first and most popular sfx library for unlimited downloads 
+                  - twice as big as most others.</p>  
+              </div>
+            </div>
+            <div class="card" style="width: 15rem" >
+              <img src="images/download (2).png" class="card-img-top" alt="..." width="120px" height="120px">
+              <div class="card-body float: left;">
+                <h5 class="card-title">Royalty Free Sound Effects</h5>
+                <p class="card-text" style="opacity: 0.5;">You can use any sound as many times as you like, without any extra fees.</p>  
+              </div>
+              </div>
+            <div class="card" style="width: 15rem" >
+              <img src="images/download (1).png" class="card-img-top" alt="..." width="120px" height="120px">
+              <div class="card-body float: left;">
+                <h5 class="card-title">Great Customer Service</h5>
+                <p class="card-text" style="opacity: 0.5;">Our support staff promises to respond to all inquiries within 24 hours.</p>  
+              </div>
+          </div>
+        </div>
+      </section>
+      <section class="w-100">
+        <div  class="d-flex sec-cont-img w-100">
+        <div style="width:30%; background-color: black; " class="d-flex flex-steretch align-items-center">
+          <h2 style=" background-color: black; color: white;
+           text-align: center; ">
+            Trusted by, <br>
+            Leadind Brands, <br>
+            Agencies, Networks <br>
+            and Hollywood Studios.
+          </h2>
+        </div>
+        <!--black and icons-->
+        <div class="bac-imag d-flex flex-wrap "style="width:70% ;">
+          <!-- <img class="img-fluid" src=" width="100%"> -->
+        <div class="d-flex w-100">
+          <div class="w-25">
+          <img class="w-50"src="images/netflix.png" alt="">
+        </div>
+        <div class="w-25">
+          <img class="w-50"src="images/tesla.png" alt="">
+        </div>
+        <div class="w-25">
+          <img class="w-50"src="images/vice.png" alt="">
+        </div>
+        <div class="w-25">
+          <img class="w-50" src="images/apple.png" alt="">
+        </div>
+      </div>
+      <div class="d-flex w-100">
+           <div class="w-25" >
+          <img class="w-50"src="images/konami.png" alt="">
+        </div>
+        <div class="w-25">
+          <img class="w-50"src="images/microsoft.png" alt="">
+        </div>
+        <div class="w-25">
+          <img class="w-50"src="images/ogilvy.png" alt="">
+        </div>
+        <div class="w-25">
+          <img class="w-50"src="images/disney.png" alt="">
+        </div>
+      </div>
+      <div class="d-flex w-100">
+        <div>
+          <img class="w-50"src="images/hbo.png" alt="">
+        </div>
+        <div class="w-25">
+          <img class="w-50"src="images/aljazeera.png" alt="">
+        </div >
+        <div class="w-25">
+          <img class="w-50"src="images/guitarhero.png" alt="">
+        </div>
+        <div class="w-25">
+          <img class="w-50"src="images/playstation.png" alt="">
+        </div>
+      </div>
+      <div class="d-flex w-100">
+        <div class="w-25">
+          <img class="w-50"src="images/discovery.png" alt="">
+        </div>
+        <div class="w-25">
+          <img class="w-50" src="images/zynga.png" alt="">
+        </div>
+        <div class="w-25">
+          <img class="w-50"src="images/snapchat.png" alt="">
+        </div>
+        <div class="w-25">
+          <img class="w-50" src="images/pixar.png" alt="">
+        </div>
+      </div>
+      <div class="d-flex w-100">
+        <div class="w-25" >
+          <img class="w-50" src="images/comedy.png" alt="">
+        </div>
+        <div  class="w-25">
+          <img class="w-50" src="images/nickelodeon.png" alt="">
+        </div>
+        <div class="w-25">
+          <img class="w-50" src="images/nokia.png" alt="">
+        </div>
+        <div class="w-25">
+          <img class="w-50"src="images/bbc.png" alt="">
+        </div>
+      </div>
+      </div>
+
+      </div>
+      </section>
+      <!--footer-->
+    <footer style="width: 100%; height: 900px;background-color: black; " class="container-fluid p-0 text-white " >
+      <div><strong style="font-size: 50px; color: white; padding-left:500px;">Sound like a Pro.</strong></div>
+      <div><strong style="font-size: 50px; color: rgb(0, 121, 101); padding-left:490px;">Get started for free.</strong></div>
+      <br>    
+      <div class="container-fluid" style="color: white;">
+    <div class="row  " style="padding-top:10%;" >
+        <div class="col-sm-1">
+
+        </div>
+        <div class="col-sm-2">
+            <a href="" style="text-decoration: none;"><img src="images/logo.svg" height="80%" width="80%"/></a>
+        </div>
+        <div class="col-sm-2">
+            <p style=" color: white;">Products</p>
+        </div>
+        <div class="col-sm-2">
+            <p style=" color: white;">Company</p>
+        </div>
+        <div class="col-sm-2">
+            <p style=" color: white;">Legal</p>
+        </div>
+        <div class="col-sm-1">
+            <p style=" color: white;">Blog</p>
+        </div>
+        <div class="col-sm-2 text-white">
+           <a href="https://www.facebook.com/Soundsnap/" style="text-decoration: none; color: white;" class="footericon">
+             <i class="fab fa-facebook-f" style="font-size: 2em;"></i></a>
+           <a href="https://twitter.com/soundsnapreal" style="text-decoration: none;padding-left:4%; color: white;" class="footericon">
+            <i class="fab fa-twitter" style="font-size: 2em;"></i></a>
+           <a href="https://www.instagram.com/soundsnapsfx/" style="text-decoration: none;padding-left:4%; color: white;" class="footericon"> 
+            <i class="fab fa-instagram" style="font-size: 2em;"></i></a>
+            <a href="https://www.youtube.com/channel/UCKVOUENwSdMz9Z97RMTPMig" style="text-decoration: none;padding-left:4%; color: white;" 
+            class="footericon"><i  class="fab fa-youtube" style="font-size: 2em;"></i></a>
+            <a href="https://www.linkedin.com/company/soundsnap" style="text-decoration: none;padding-left:4%; color: white;" class="footericon">
+              <i class="fab fa-linkedin-in" style="font-size: 2em;"></i></a>
+        </div>
+    </div>
+    <div class="row  " >
+        <div class="col-sm-3">
+
+        </div>
+        
+        <div class="col-sm-2">
+            <a href="" style="text-decoration: none; color: white;" class="linkfooter">Browse Sounds</a>
+        </div>
+        <div class="col-sm-2">
+            <a href="" style="text-decoration: none; color: white;" class="linkfooter">Jobs</a>
+        </div>
+        <div class="col-sm-2">
+            <a href="" style="text-decoration: none; color: white;" class="linkfooter">License</a>
+        </div>
+        <div class="col-sm-1">
+            <a href="" style="text-decoration: none; color: white;" class="linkfooter">Home</a>
+        </div>
+        <div class="col-sm-2">
+
+        </div>
+     </div>
+        <div class="row  " >
+            <div class="col-sm-3">
+    
+            </div>
+            
+            <div class="col-sm-2 ">
+                <a href="pricing.html" style="text-decoration: none; color: white;" class="linkfooter">Pricing</a>
+            </div>
+            <div class="col-sm-2 ">
+                <a href="" style="text-decoration: none; color: white;" class="linkfooter">Comunity</a>
+            </div>
+            <div class="col-sm-2 ">
+                <a href="" style="text-decoration: none;color: white; " class="linkfooter">Terms of use</a>
+            </div>
+            <div class="col-sm-1 ">
+                <a href="" style="text-decoration: none; color: white;" class="linkfooter">Glossary</a>
+            </div>
+            <div class="col-sm-2 ">
+    
+            </div>
+        </div>
+       <div class="row  " >
+                <div class="col-sm-3">
+        
+                </div>
+                
+                <div class="col-sm-2">
+                    <a href="FAQ.html" style="text-decoration: none; color: white; " class="linkfooter">FAQ</a>
+                </div>
+                <div class="col-sm-2">
+                    <a href="" style="text-decoration: none;  color: white;" class="linkfooter">Education</a>
+                </div>
+                <div class="col-sm-2">
+                    <a href="" style="text-decoration: none;  color: white;" class="linkfooter">Privacy of Policy</a>
+                </div>
+                <div class="col-sm-1">
+                    <a href="" style="text-decoration: none;  color: white;" class="linkfooter">Free Stuff</a>
+                </div>
+                <div class="col-sm-2">
+        
+                </div>
+       </div>
+                <div class="row  " >
+                    <div class="col-sm-5">
+            
+                    </div>
+                    
+                
+                    <div class="col-sm-2">
+                        <a href="Contact Us.html" style="text-decoration: none; color: white" class="linkfooter">Contact</a>
+                    </div>
+                  
+                    <div class="col-sm-5">
+            
+                    </div>
+                </div>
+                <div class="row  " style="padding-top: 5%;">
+                    <div class="col-sm-4">
+            
+                    </div>
+                    
+                
+                    <div class="col-sm-4">
+                        <p style="color: white;">Soundsnap &copy; 2008 - 2022, All rights reserved</p>
+                    </div>
+                  
+                    <div class="col-sm-4">
+            
+                    </div>
+                </div>
+                </div>
+                
+    </footer>
+    
+  <script>
+    function converttologin(event)
+    {
+      event.preventDefault();
+      document.querySelector("#dia").close();
+      document.querySelector("#dia").style.display="none";
+      document.getElementById("dalog").style.display="inline-block";
+     document.getElementById("dalog").showModal();
+
+    }
+
+    function converttoregister(event)
+    {
+      event.preventDefault();
+      document.querySelector("#dalog").close();
+      document.querySelector("#dalog").style.display="none";
+      document.getElementById("dia").style.display="inline-block";
+     document.getElementById("dia").showModal();
+
+    }
+    function logpage() {
+      document.getElementById("dalog").style.display="inline-block";
+     document.getElementById("dalog").showModal();
+    }
+function closedialog()
+{
+document.getElementById("dalog").close();
+document.getElementById("dalog").style.display="none";
+
+}
+function loged()
+{
+
+   var Email_address=document.getElementById("Uemail").value
+   var Password=document.getElementById("Upass").value
+   //////////////////getitem from local-storage//////////////////
+   var Semail=localStorage.getItem("email")
+   var Spass=localStorage.getItem("pass")
+   if(Semail!=Email_address && Spass!=Password )
+   {
+   
+       document.getElementById("hide").style.visibility="visible"
+   
+}
+  
+}
+
+  function showdia()
+          {
+            document.querySelector("#dia").style.display="inline-block";
+              document.querySelector("#dia").showModal();
+          }
+  function showmsg()
+  {
+      document.querySelector("#msgemailinvalid").style.display="inline-block";
+  }
+
+  function closedia()
+  {
+      document.querySelector("#dia").close();
+      document.querySelector("#dia").style.display="none";
+   }
+
+  
+          function created()
+         {  
+              setdata();
+              document.querySelector("#dia").close(); 
+              setTimeout(function(){alert("You will shortly receive a verification email for "+ emaiil),900 ;});
+                  
+          
+         }
+         var emaiil;
+         function setdata()
+         { 
+           emaiil = document.querySelector('#emailinput').value;
+          var password =  document.querySelector('#passwordinput').value;
+          localStorage.setItem("Email",emaiil);
+          localStorage.setItem("pass",passwordinput);
+          
+         }
+         function checkforvaliddata(event)
+         { 
+            if( document.querySelector("#Confirmpasswordinput").value!=document.querySelector("#passwordinput").value)
+            { 
+              document.querySelector("#msgconfirm").style.visibility="visible";
+             document.querySelector("#Confirmpasswordinput").value="";}
+             else
+             {  var regx= /^[a-zA-Z]{4,}@Gmail\.com$/;
+                  if((document.querySelector('#checkboxinput').checked ==true)&&(document.querySelector('#emailinput').value.match(regx)) )
+                 {created(); 
+                 document.querySelector("#msgconfirm").style.visibility="hidden";
+                 }
+                 
+             }
+
+
+
+         }
+       
+</script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script> 
+
+</body>
+</html>

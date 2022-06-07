@@ -1,0 +1,97 @@
+<!Doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <title>submit demo</title>
+  <style>
+  p {
+    margin: 0;
+    color: blue;
+  }
+  div,p {
+    margin-left: 10px;
+  }
+  span {
+    color: red;
+  }
+  label{
+      font-size: 20px;
+
+  }
+  #icon1,#icon2,#icon3{color: white;}
+  #icon1:hover,#icon2:hover,#icon3:hover{color: gray;}
+  </style>
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+  <script src="https://kit.fontawesome.com/fff485e343.js" crossorigin="anonymous"></script>
+</head>
+<body style="background-color: #F9F9F9;">
+    <nav class="navbar navbar-white " >
+        <div class="container">
+          <a class="navbar-brand" href="index.html"><img style="padding-left: 150px;" src="images/logo.svg"></a>
+          <div class="d-flex  nav-links">
+            <a href="#" class="me-2 text-dark " style="text-decoration: none;">Help More |</a>
+            <a href="#" class="me-2 text-dark " style="text-decoration: none;">Contact Us</a>
+          </div>
+        </div>
+      </nav>
+      <br>
+      <br>
+      <br>
+      <div class="class-bg-white" style="position: relative;padding: 3%;left:25%;height: 500px;width: 50%;background-color:white; "> 
+        <form action="index.html">
+          <h1>Submit Request</h1>
+          <label for="email">Your email address*</label><br><br>
+          <input  id="email" type="email" name="Email" style="width: 100%; height: 40px;" ><br>
+          <label for="subject">Subject*</label><br><br>
+          <input  id="subject" type="text" name="Email" style="width: 100%; height: 40px;" ><br>
+          <label for="w3review">Description*</label><br><br>
+          <textarea id="w3review" name="w3review" rows="4" cols="50" style="width: 100%;">
+            </textarea><br>
+
+            <p style="font-size: 12px;">Please enter the details of your request. A member of our support staff will respond as soon as possible.</p><br><br>
+           
+
+          
+            <input type="submit" style="background-color: #6D8F89; height: 40px;" id="subbtn"><br><br>
+      </div>
+    </form>
+    <span></span>
+  <div class="container-fluid p-0">
+    <div class="row container-fluid   " style="height: 5em">
+           
+    </div>
+    <div class="row container-fluid  m-0 " style="background-color: black;height: 5em" >
+        <div class="col-sm-4 offset-sm-1">
+                   <p style="color: white;padding-top: 2.6em;"> @Sound snap</p>
+        </div>
+       <div class="col-sm-4" style="padding-top: 2.6em;">
+           <a href="" style="text-decoration: none;" id="icon1"> <i class="fab fa-twitter-square" style="font-size: 2em;padding-left: .2em;"></i> </a>
+          <a href="" style="text-decoration: none;" id="icon2">  <i class="fab fa-facebook-square" style="font-size: 2em;padding-left: .2em;"></i> </a>
+          <a href="" style="text-decoration: none;" id="icon3">  <i class="fab fa-linkedin" style="font-size: 2em;padding-left: .2em;"></i> </a>
+
+       </div>
+
+
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+ 
+<script>
+  $(document).ready(function(){
+
+  $( "form" ).submit(function( event ){
+
+  alert("Success !");
+ });
+   });
+</script>
+ 
+</body>
+</html>

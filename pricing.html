@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        body {
+            background-color: white;
+            overflow-x: hidden; 
+           
+
+        }
+
+        a:hover
+        {
+            cursor: pointer;
+        }
+        i {
+            color: gray;
+        }
+
+
+
+        nav {
+
+            background-color: black;
+            height: 110px;
+            width: 100%;
+            color: white;
+            position: fixed;
+            z-index: 9999;
+            transition: 1s;
+            /* border: 1px solid red; */
+
+        }
+
+        li {
+            display: inline-block;
+            margin-left: 5%;
+
+
+        }
+
+
+        #logo {
+
+            float: left;
+            padding: 2%;
+            height: 70px;
+
+        }
+
+        #logo label {
+            position: relative;
+            top: 150%;
+            right: 1%;
+        }
+        
+
+        #links {
+
+
+            width: 48%;
+            position: relative;
+            right: 2%;
+            top: 30%;
+            float: right;
+            padding: 1%;
+
+
+        }
+
+        li a {
+            font-size: 20px;
+        }
+
+        #section1 {
+
+             height: 400px; 
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 5%;
+            /* width: 101%; */
+            /* height: 160px */
+
+
+        }
+
+        #section2 {
+
+            height: 410px;
+            width: 60%;
+            border-radius: 2%;
+            padding: 3%;
+            
+            color: black;
+            text-align: center;
+            background-color: rgba(238, 238, 238, 0.856);
+            position: relative;
+            left: 20%;
+            /* bottom: 5%; */
+          
+          
+
+
+        }
+
+        #section2 div p {
+            font-size: 30px;
+            font-weight: bolder;
+            
+        }
+
+        #section2 div span {
+            color: gray;
+            font-size: 18px;
+
+        }
+
+        #section2 div button {
+            border-radius: 5%;
+
+            width: 40%;
+            height: 40px;
+        }
+
+        #leftdiv {
+            float: left;
+            height: 257px;
+            width: 50%;
+            padding: 3%;
+             border-right: 1px dashed rgb(190, 189, 189);
+
+        }
+
+        #rightdiv {
+            float: right;
+            height: 250px;
+            width: 50%;
+            padding: 3%;
+
+        }
+
+        #section3 {
+
+            color: gray;
+            padding: 2%;
+            height: 200px;
+            width: 70%;
+            position: relative;
+            left: 15%;
+
+        }
+
+        #section3 #list1 li img {
+            filter: grayscale(100%);
+            width: 8%;
+
+
+        }
+
+        #section3 #list1 li {
+            list-style-type: none;
+            display: inline;
+            margin-left: 2px;
+
+        }
+
+        #section3 #list1 {
+            position: relative;
+            left: 5%;
+        }
+
+        #section3 #list2 li img {
+            filter: grayscale(100%);
+            width: 8%;
+        }
+
+        #section3 #list2 li {
+            list-style-type: none;
+            display: inline;
+            margin-left: 5px;
+        }
+
+        #section3 #list2 {
+            position: absolute;
+            left: 35%;
+        }
+
+         .panal {
+            color: grey;
+            font-size: 18px;
+            display: none;
+         
+            overflow: hidden;
+           
+
+        }
+
+     
+       
+       .accordion-item
+       {
+           background-color: black;
+           color: white;
+           padding: 1%;
+       }
+       .accordion
+       {
+           width:100%;
+
+             }
+       
+       .accordion-button
+       {
+        background-color: black;
+        color:white;
+        font-size: 25px;
+        
+        border-bottom: 1px solid gray;
+       }
+        
+       :focus {
+         outline: 0 !important;
+         box-shadow: 0 0 0 0 rgba(0, 0, 0, 0) !important;
+           }
+       
+     
+
+        footer{
+            background-color: black;
+            
+            height: 419px;
+            color: white;
+        }
+         footer a{
+             color:gray;
+             text-decoration: none;
+         }
+    </style>
+</head>
+
+<body>
+    <nav id="navbar">
+        <div id="logo">
+
+           <a src="#"><img src="images/logoo.jpg" style="width: 10%;"></a> <label>soundsnap</label>
+
+
+            <input type="search" name="search" placeholder="serach for sound effects"
+                style="width: 40%; height: 35px; position: absolute;bottom: 20%;left:10%;  background-color: rgb(43, 41, 41); ">
+        </div>
+        <div id="links">
+            <ul>
+                <li><a src="#">Pricing</a></li>
+                <li><a src="#">Blog</a></li>
+                <li><a src="#">FAQ</a></li>
+                <li><a src="#">SFHXD</a></li>
+                <li><a src="#">log</a>/<a src="#">Register</a></li>
+                <li><i class="fab fa-facebook-f"></i></li>
+                <li><i class="fab fa-twitter"></i></li>
+                <li><i class="fab fa-instagram"></i></li>
+
+            </ul>
+
+        </div>
+    </nav>
+
+    <section id="section1">
+        <p style="font-size: 58px; margin-top: 50px;">Join the world's most popular sounds website <br><span
+                style="font-size: 18px;">And
+                start downloading from our library of 460,103
+                professional sounds</span> </p>
+    </section>
+    <section id="section2">
+        <p style="text-align: center;border-bottom: 1px dashed rgb(190, 190, 190);">SUBSCRIBE AND SAVE</p>
+
+        <div id="leftdiv">
+            <p>6 Month Subscription</p><br><br>
+            <span>$<span style="color:black;font-size: 30px;">149</span>/6 mos</span><br><br>
+            <span>$ 25 / month - Up to 150 Downloads</span><br><br>
+            <button>Access Now</button>
+
+        </div>
+        <div id="rightdiv">
+            <p>Annual Unlimited</p><br><br>
+            <span>$<span style="color:black;font-size: 30px;">249</span>/ year</span><br><br>
+            <span>$ 21 / month - Unlimited Downloads</span><br><br>
+            <button style="background-color: rgb(37, 223, 161);">Access Now</button>
+
+        </div>
+
+    </section><br><br><br>
+
+    <section id="section3">
+        <p style="text-align: center;">WE ARE TRUSTED BY SOME OF THE BIGGEST MEDIA AND ADVERTISING BRANDS</p><br>
+        <ul id="list1">
+            <li><img src="images/img1.png"></li>
+            <li><img src="images/img2.png"></li>
+            <li><img src="images/img3.png"></li>
+            <li><img src="images/img4.jpg"></li>
+            <li><img src="images/img5.png"></li>
+            <li><img src="images/img6.png"></li>
+            <li><img src="images/img7.jpg"></li>
+            <li><img src="images/img8.png"></li>
+            <li><img src="images/img9.webp"></li>
+            <li><img src="images/img10.png"></li>
+        </ul><br>
+
+        <ul id="list2">
+            <li><img src="images/img11.png"></li>
+            <li><img src="images/img12.jpg"></li>
+            <li><img src="images/img13.png"></li>
+            <li><img src="images/img14.jpg"></li>
+
+        </ul><br>
+
+    </section><br><br><br><br><br>
+    
+  
+        <div class="accordion" id="accordionPanelsStayOpenExample">
+           
+            <div  class="accordion-item">
+                <h1>Frequently Asked Questions</h1><br><br><br>
+              <h2 class="accordion-header" id="panelsStayOpen-headingOne" >
+                <button class="accordion-button" style="background-color: black;color: white; border: none;"  type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false" aria-controls="panelsStayOpen-collapseOne">
+                    Can I still Use the sounds even if my subscription expires and/or if I delete my account
+                </button>
+              </h2>
+              <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                <div class="accordion-body">
+                    <p> Yes – you can use the sounds indefinitely, even if you currently
+                        have no active <br>subscriptions or an active account on Soundsnap. The same rules of our <span
+                            style="color: rgb(10, 177, 99);">end user license</span> will continue to apply</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                <button  class="accordion-button collapsed" style="background-color: black;color: white; border: none;" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                    Who is The VAT field for?
+                </button>
+              </h2>
+              <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+                <div class="accordion-body">
+                    <p> The VAT field only applies to EU companies that are VAT registered
+                        and have an EU VAT number. Once a <br>valid number has been entered, the applied tax may be removed
+                        according to regulations about intra-<br>community transactions. The VAT field should be left blank for
+                        anyone outside the European Union<br> (companies and consumers) and also should be left blank for EU
+                        consumers and individuals (that are not VAT<br> registered companies).</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                <button class="accordion-button collapsed" style="background-color: black;color: white; border: none;" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                    Can i change my billing information on my account for future purcheses?
+                </button>
+              </h2>
+              <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+                <div class="accordion-body">
+                    <p> Yes, you can add a new card for Mastercard and Visa, but you
+                        cannot change your card to PayPal or vice<br> versa or change a PayPal email to another email. To change
+                        your card, go to your profile page, then under<br> Billing you will see an 'Edit' button next to your
+                        card info. </p> 
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                  <button class="accordion-button collapsed" style="background-color: black;color: white; border: none;" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
+                    Is the paymant page secure?
+                  </button>
+                </h2>
+                <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFour">
+                  <div class="accordion-body">
+                    <p> Yes, we use state of the art SSL encryption. </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                  <button class="accordion-button collapsed" style="background-color: black;color: white; border: none;" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">
+                    What forms of paymant do you accept?
+                  </button>
+                </h2>
+                <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFive">
+                  <div class="accordion-body">
+                    <p> We currently accept Visa, Mastercard, Paypal and American Express. </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                  <button class="accordion-button collapsed" style="background-color: black;color: white; border: none;" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSix" aria-expanded="false" aria-controls="panelsStayOpen-collapseSix">
+                   Do you store my credit card information? 
+                  </button>
+                </h2>
+                <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingSix">
+                  <div class="accordion-body">
+                    <p> No, your payment info never remains on our servers.<br>
+                        For Annual accounts, your credit information is saved securely by the credit card processor.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                  <button class="accordion-button collapsed" style="background-color: black;color: white; border: none;" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSeven" aria-expanded="false" aria-controls="panelsStayOpen-collapseSeven">
+                    How offen will you bill my card ?
+                  </button>
+                </h2>
+                <div id="panelsStayOpen-collapseSeven" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingSeven">
+                  <div class="accordion-body">
+                    <p> Annual subscribers will have their card charged annually. 6-month subscribers will be billed every six months.<br>
+                        You may cancel an Annual or 6-month subscription at any time from the billing settings page in your profile<br> so that it will not be renewed.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                  <button class="accordion-button collapsed" style="background-color: black;color: white; border: none;" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseEight" aria-expanded="false" aria-controls="panelsStayOpen-collapseEight">
+                   Iam about to make purchase,and will need an invoice/reciept
+                  </button>
+                </h2>
+                <div id="panelsStayOpen-collapseEight" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingEight">
+                  <div class="accordion-body">
+                    <p>You will be asked to enter your company information before completing your purchase.<br>
+                        You can later find your receipts by visiting your Profile and then selecting the 'Billing & Invoices' tab.<br>
+                        Once there, click on "Invoices" where you can view and download a pdf of your receipt.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                  <button class="accordion-button collapsed" style="background-color: black;color: white; border: none;" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseNine" aria-expanded="false" aria-controls="panelsStayOpen-collapseNine">
+                   Iam trying to buy something,but i'm getting a message saying there was a problem loading the payment process
+                  </button>
+                </h2>
+                <div id="panelsStayOpen-collapseNine" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingNine">
+                  <div class="accordion-body">
+                    <p>This may be caused by a plugin on your browser. If you are using a browser plugin (DuckDuckGo, Privacy Badger, etc), try disabling it, or use Private<br>/ Incognito Mode before reloading the page.</p>
+                  </div>
+                </div>
+              </div>
+
+              <footer class="container-fluid p-0">
+               
+                <div class="row  " style="padding-top:7%;" >
+                    <div class="col-sm-1">
+            
+                    </div>
+                    <div class="col-sm-2">
+                        <a href="" style="text-decoration: none;"><img  style="position: relative;bottom: 35%;"src="images/logoo.jpg"  width="40%"/></a><label style="position: relative; bottom: 30%;">soundsnap</label>
+                    </div>
+                    <div class="col-sm-2">
+                        <p style=" color: white;">Products</p>
+                    </div>
+                    <div class="col-sm-2">
+                        <p style=" color: white;">Company</p>
+                    </div>
+                    <div class="col-sm-2">
+                        <p style=" color: white;">Legal</p>
+                    </div>
+                    <div class="col-sm-1">
+                        <p style=" color: white;">Blog</p>
+                    </div>
+                    <div class="col-sm-2">
+                       <a href="https://www.facebook.com/Soundsnap/" style="text-decoration: none;" class="footericon"> <i class="fab fa-facebook-f" style="font-size: 2em;"></i></a>
+                       <a href="https://twitter.com/soundsnapreal" style="text-decoration: none;padding-left:4%;" class="footericon"><i class="fab fa-twitter" style="font-size: 2em;"></i></a>
+                       <a href="https://www.instagram.com/soundsnapsfx/" style="text-decoration: none;padding-left:4%;" class="footericon"> <i class="fab fa-instagram" style="font-size: 2em;"></i></a>
+                        <a href="https://www.youtube.com/channel/UCKVOUENwSdMz9Z97RMTPMig" style="text-decoration: none;padding-left:4%;" class="footericon"><i  class="fab fa-youtube" style="font-size: 2em;"></i></a>
+                        <a href="https://www.linkedin.com/company/soundsnap" style="text-decoration: none;padding-left:4%;" class="footericon"><i class="fab fa-linkedin-in" style="font-size: 2em;"></i></a>
+                    </div>
+                   
+            
+                </div>
+                <div class="row  " >
+                    <div class="col-sm-3">
+            
+                    </div>
+                    
+                    <div class="col-sm-2">
+                        <a href="" style="text-decoration: none; " class="linkfooter">Browse Sounds</a>
+                    </div>
+                    <div class="col-sm-2">
+                        <a href="" style="text-decoration: none; " class="linkfooter">Jobs</a>
+                    </div>
+                    <div class="col-sm-2">
+                        <a href="" style="text-decoration: none; " class="linkfooter">License</a>
+                    </div>
+                    <div class="col-sm-1">
+                        <a href="" style="text-decoration: none; " class="linkfooter">Home</a>
+                    </div>
+                    <div class="col-sm-2">
+            
+                    </div>
+                 </div>
+                    <div class="row  " >
+                        <div class="col-sm-3">
+                
+                        </div>
+                        
+                        <div class="col-sm-2">
+                            <a href="" style="text-decoration: none; " class="linkfooter">Pricing</a>
+                        </div>
+                        <div class="col-sm-2">
+                            <a href="" style="text-decoration: none; " class="linkfooter">Comunity</a>
+                        </div>
+                        <div class="col-sm-2">
+                            <a href="" style="text-decoration: none; " class="linkfooter">Terms of use</a>
+                        </div>
+                        <div class="col-sm-1">
+                            <a href="" style="text-decoration: none; " class="linkfooter">Glossary</a>
+                        </div>
+                        <div class="col-sm-2">
+                
+                        </div>
+                    </div>
+                   <div class="row  " >
+                            <div class="col-sm-3">
+                    
+                            </div>
+                            
+                            <div class="col-sm-2">
+                                <a href="" style="text-decoration: none; " class="linkfooter">FAQ</a>
+                            </div>
+                            <div class="col-sm-2">
+                                <a href="" style="text-decoration: none; " class="linkfooter">Education</a>
+                            </div>
+                            <div class="col-sm-2">
+                                <a href="" style="text-decoration: none; " class="linkfooter">Privacy of Policy</a>
+                            </div>
+                            <div class="col-sm-1">
+                                <a href="" style="text-decoration: none; " class="linkfooter">Free Stuff</a>
+                            </div>
+                            <div class="col-sm-2">
+                    
+                            </div>
+                   </div>
+                            <div class="row  " >
+                                <div class="col-sm-5">
+                        
+                                </div>
+                                
+                            
+                                <div class="col-sm-2">
+                                    <a href="#" >Contact</a>
+                                </div>
+                              
+                                <div class="col-sm-5">
+                        
+                                </div>
+                            </div>
+                            <div class="row  " style="padding-top: 5%;">
+                                <div class="col-sm-4">
+                        
+                                </div>
+                                
+                            
+                                <div class="col-sm-4">
+                                    <p style="color: white;">@2022 Sound Snap Blog.All Rights reserved</p>
+                                </div>
+                              
+                                <div class="col-sm-4">
+                        
+                                </div>
+                            </div>
+            
+            </footer>
+          </div>
+    
+  
+
+
+    <script>
+window.onscroll = function() {myFunction()};
+
+function myFunction() {
+  {
+      if(document.body.scrollTop > 0 || document.documentElement.scrollTop > 0)
+      {
+    document.getElementById("navbar").style.backgroundColor= "white";
+    document.getElementById("navbar").style.color= "black";
+      }
+    else
+    {
+        document.getElementById("navbar").style.backgroundColor= "black";
+    document.getElementById("navbar").style.color= "white";
+    }
+  }
+}
+     
+    </script>
+</body>
+
+</html>
